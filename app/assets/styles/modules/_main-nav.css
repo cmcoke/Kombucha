@@ -1,0 +1,92 @@
+.main-nav{
+
+  /* contains the unordered list of the site' main navigation links */
+  &__list{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+
+  @mixin atLarge{
+      display: flex;
+      margin: 0;
+    }
+
+  }
+
+
+  /* individual list items containing their respected navigation link */
+  &__item{
+    position: relative;
+    display: block;
+    height: 30%;
+    height: calc(100% / 5);
+    min-height: 30px;
+    opacity: 0;
+
+  @mixin atLarge{
+      position: relative;
+      display: block;
+      height: auto;
+      min-height: auto;
+      opacity: 1;
+      text-align:center;
+
+      &:not(:last-child){
+        margin-right: 33px;
+      }
+    }
+
+    @media (min-width: 68.75em){ /* 1100px = 68.75em */
+
+      &:not(:last-child){
+        margin-right: 45px;
+      }
+
+    }
+
+  }
+
+
+  /*  individual links for the site' main navigation  */
+  &__link{
+    color: black;
+    font-family: $primary-font;
+    font-weight: 400;
+    letter-spacing: 0.10em;
+    position: relative;
+
+    /* creates the orange line that goes from left to right when hovering over the links. */
+    &:not(.main-nav__current-page):after{
+
+    @mixin atLarge{
+        content: '';
+        position: absolute;
+        bottom: -9px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: $color-orange;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s;
+      }
+
+    }
+
+    &:not(.main-nav__current-page):hover{
+
+    @mixin atLarge{
+        &:after{
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+
+    }
+
+  }
+
+
+}

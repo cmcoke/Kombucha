@@ -1,0 +1,14 @@
+.grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 4%;
+  
+  @mixin atXLarge{
+    margin: 0 11%;
+  }
+
+  @mixin atXXLarge{
+    margin: 0 18%;
+  }
+
+}

@@ -1,0 +1,143 @@
+.header{
+  padding: 20px 0;
+
+  @mixin atLarge{
+    padding: 30px 0;
+  }
+
+
+  /* company' logo, site' main navigation, icons */
+  &__logo, &__menu-content, &__icons, &__mobile-menu{
+    align-self: center;
+  }
+
+
+  /* company' logo */
+  &__logo{
+    grid-column: 1/6;
+
+    @mixin atSmall{
+      grid-column: 1/3;
+    }
+
+  }
+
+
+  /* site' main navigation */
+  &__menu-content{
+    display: none;
+
+    @mixin atLarge{
+      display: block;
+      grid-column: 4/11;
+      justify-self: center;
+
+    }
+
+    @mixin atXLarge{
+      justify-self: end;
+    }
+
+  }
+
+
+  /* contains the search, cart & login icons */
+  &__icons{
+    display: none;
+
+    @mixin atLarge{
+      grid-column: 12/13;
+      display: flex;
+      align-items:center;
+      justify-self:center;
+    }
+
+
+  }
+
+  /* adds space between the search, cart & login icons  */
+  &__icons li:not(:last-child){
+
+    @mixin atLarge{
+      margin-right: 25px;
+    }
+
+    @mixin atXLarge{
+      margin-right: 30px;
+    }
+
+  }
+
+  /* sets a max-wdth of the search, cart & login icons */
+  &__icons img{
+
+    @mixin atLarge{
+      max-width: 1.75rem; /* 28px = 1.75rem */
+    }
+
+    @mixin atXLarge{
+      max-width: none;
+    }
+
+  }
+
+  /* contains the mobile menu icon */
+  &__mobile-menu{
+    position: relative;
+    grid-column: 12/13;
+
+    @mixin atLarge{
+      display: none;
+    }
+
+  }
+
+
+  /* the mobile menu icon */
+  &__mobile-menu-icon{
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    width: 20px;
+    height: 19px;
+    z-index: 5;
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 33px;
+      height: 3px;
+      background-color: $color-black;
+      transition: transform .3s ease-out;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 7px;
+      right: 0px;
+      width: 33px;
+      height: 3px;
+      background-color: $color-black;
+      transition: transform .3s ease-out;
+    }
+
+  }
+
+
+  /* shows the x icon when the mobile menu icon is clicked */
+  &__mobile-menu-icon--close{
+
+    &::before{
+      transform: translateX(-11px) rotate(-48deg) translateY(13px);
+    }
+
+    &::after{
+      transform: translateX(-1px) rotate(42deg) translateY(1px);
+    }
+
+  }
+
+}
