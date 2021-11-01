@@ -1,0 +1,98 @@
+.main-item{
+  
+
+  /* main item' image */
+  &__image{
+    grid-column: 1/13;
+
+    @mixin atSmall{
+      grid-column: 2/12;
+    }
+    
+
+    @mixin atMedium{
+      grid-column: 1/6;
+      align-self: center;
+    }
+
+  }
+
+
+  /* main item' text content */
+  &__text-content{
+    grid-column: 1/13;
+
+    @mixin atMedium{
+      grid-column: 7/13;
+      align-self: center;
+    }
+
+    @mixin atLarge{
+      grid-column: 7/12;
+      margin-top: 3rem;
+    }
+
+  }
+
+
+  /* price of the item */
+  &__price{
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    @mixin atLarge{
+      margin-bottom: 70px;
+    }
+  }
+
+  &__price span{
+    color: #3b3b3b;
+    font-family: $price-font;
+    font-size: clamp(2.1875rem, 1rem + 1vw, 2.8125rem);
+    font-weight: bold;
+  }
+
+
+  &__price hr{
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    border-style: inset;
+    border-width: 1px;
+    max-width: 50%;
+    margin-left: 0;
+
+    @mixin atMedium{
+      margin-top: 2.3em;
+      margin-bottom: 2.3em;
+      max-width: 70%;
+    }
+
+    @mixin atLarge{
+      max-width: 33%;
+    }
+
+  }
+
+
+  /* refers to the items - ingredients, flavors & volume  */
+  &__infromation{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+
+    @mixin atSmall{
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    @mixin atLarge{
+      margin-top: 40px;
+    }
+
+  }
+  
+
+}

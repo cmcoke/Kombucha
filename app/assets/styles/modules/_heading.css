@@ -1,0 +1,70 @@
+.heading{
+  
+  h1&{
+    color: $color-purple;
+    font-family: $brand-font;
+    font-size: clamp(2.1875rem, 1vw, 3.125rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-top: 18px;
+    margin-bottom: 33px;
+
+    @mixin atLarge{
+      font-size: 2.8125rem; /* 2.8125rem = 45px */
+    }
+
+    @mixin atXXLarge{
+      font-size: clamp(2.8125rem, 1rem + 2vw, 5rem);;
+    }
+  }
+
+
+  h3&{
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 9px;
+  }
+
+
+  h5&{
+    font-size: 15px;
+    font-family: $primary-font;
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: relative;
+  }
+
+
+  /* this places the black line after the text heading -- 'ORGANIC TEA' in the main item section */
+  &__line{
+    background-color: #fff;
+    padding-right: 15px;
+
+    &:after{
+      content:"";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 0.5em;
+      width: 13em;
+      border-top: 2px solid $color-black;
+      z-index: -1;
+    }
+
+  }
+
+
+  &--orange{
+    color: $color-orange;
+  }
+
+
+  /* main item section heading text 'KOMBUCHA' */
+  &--span{
+    font-weight: 500;
+  }
+
+
+}
