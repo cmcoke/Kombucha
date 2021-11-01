@@ -11,4 +11,12 @@
     margin: 0 18%;
   }
 
+
+  /* sponsors section */
+  &--sponsors{
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) repeat(5, 1fr) minmax(2rem, 1fr);
+    grid-gap: 0 1rem;
+  }
+
 }
