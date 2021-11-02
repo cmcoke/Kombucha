@@ -23,7 +23,7 @@
 }
 
 @define-mixin atXXLarge {
-  @media (min-width: 87.5em){ /* 1400px = 87.5em */
+  @media (min-width: 125em){ /* 2000px = 125em */
     @mixin-content;
   }
 }

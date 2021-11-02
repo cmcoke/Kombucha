@@ -1,0 +1,275 @@
+.popular-items{
+
+  @mixin atMedium{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @mixin atLarge{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+
+  & .heading, &__navigation{
+    grid-column: 1/13;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+
+    @mixin atMedium{
+      text-align: left;
+    }
+  }
+
+
+  /* section's main heading */
+  & .heading{
+    grid-row: 1/2;
+    margin: 0;
+
+    @mixin atMedium{
+      grid-row: 1/2;
+    }
+
+    @mixin atLarge{
+      grid-column: 1/6;
+      justify-self: start;
+    }
+
+  }
+
+  /* tab navigations */
+  &__navigation{
+    justify-self: center;
+    padding: 20px 0;
+    display: flex;
+
+
+    @mixin atLarge{
+      grid-column: 7/13;
+      grid-row: 1/2;
+      justify-self: end;
+      padding: 0;
+    }
+
+  }
+
+
+  /* contains the numbers that correspond to the tab content  */
+  &__navigation button{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: $brand-font;
+    font-size: 15px;
+    color: #969fb0;
+    cursor: pointer;
+    background-color: #fff;
+    margin-right: 35px;
+    transition: all.2s ease-in-out;
+
+    @mixin atMedium{
+      margin-right: 70px;
+    }
+
+    @mixin atLarge{
+      margin-right: 40px;
+    }
+
+    @mixin atXLarge{
+      margin-right: 70px;
+    }
+
+  }
+
+  /* changes the font size of the number when clicking on a number */
+  &__navigation button.active{
+    font-size: 23px;
+    color: #393d46;
+  }
+
+
+  /* adds a line to the left of the number */
+  &__navigation button:after{
+    display: inline-block;
+    content: "";
+    border-top: 2px solid #969fb0;
+    width: 2rem;
+    transform: translateX(20px) translateY(-5px);
+
+    @mixin atMedium{
+      width: 4rem;
+    }
+  }
+
+  /* changes the color of the line when clicking on a number */
+  .line-color-change:after{
+    border-top: 2px solid #393d46;
+  }
+
+
+
+  /* tab content */
+  &__container{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 1.4rem;
+    animation: fadeEffect 2s;
+    display: none;
+
+    @mixin atLarge{
+      margin-top: 60px;
+      grid-gap: 0 2rem;
+    }
+
+  }
+
+
+  &__container > *{
+    margin-bottom: 2rem;
+
+    @mixin atLarge{
+      margin-bottom: 0;
+    }
+
+  }
+
+
+  /* media object -- places the text content and the image of the popular item side by side. */
+  &__product-one, &__product-two{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 20px 33px rgba(0,0,0,.07);
+
+    @mixin atMedium{
+      text-align: left;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @mixin atLarge{
+      grid-template-columns: 250px 160px;
+      max-width: 50rem;
+    }
+
+    @mixin atXLarge{
+      grid-template-columns: auto 190px;
+    }
+
+    @mixin atXXLarge{
+      grid-template-columns: auto 220px;
+      padding: 3rem;
+    }
+
+  }
+
+
+  /* product one */
+  &__product-one{
+    grid-column: 1/-1;
+
+    @mixin atSmall{
+      grid-column: 2/12;
+    }
+
+    @mixin atMedium{
+      grid-column: 1/-1;
+      align-self: center;
+    }
+
+    @mixin atLarge{
+      grid-column: 1/7;
+    }
+
+    @mixin atXLarge{
+      grid-column: 1/6;
+    }
+
+
+  }
+
+
+  /* product two */
+  &__product-two{
+    grid-column: 1/-1;
+
+    @mixin atSmall{
+      grid-column: 2/12;
+    }
+
+    @mixin atMedium{
+      grid-column: 1/-1;
+      align-self: center;
+    }
+
+    @mixin atLarge{
+      grid-column: 7/13;
+    }
+
+    @mixin atXLarge{
+      grid-column: 7/12;
+    }
+
+  }
+
+
+  /* popular item text content */
+  &__text-content{
+    grid-row: 2/3;
+    justify-self: center;
+
+    @mixin atMedium{
+      grid-row: 1/2;
+      align-self: center;
+    }
+
+  }
+
+
+  /* popular item image */
+  &__product-one img, &__product-two img{
+    grid-row: 1/2;
+    justify-self: center;
+
+    @mixin atMedium{
+      grid-row: 1/2;
+      align-self: center;
+    }
+
+  }
+
+
+  /* buy now button */
+  &__text-content .button{
+    margin-top: 25px;
+
+    @mixin atMedium{
+      margin-top: 30px;
+    }
+
+    @mixin atLarge{
+      margin-top: 30px;
+    }
+
+  } 
+
+
+  /* adds the fade effect to the tab content when selecting any number tab navigation */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  #group1{
+    display: grid;
+  }
+
+}
+
+
+
+

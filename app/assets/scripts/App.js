@@ -1,17 +1,11 @@
 import '../styles/styles.css'
 import 'lazysizes'
 import 'picturefill'
+import PopularItems from './modules/PopularItems'
 
 
 
-
-
-
-
-
-
-
-
+let popularItems = new PopularItems();
 
 
 
