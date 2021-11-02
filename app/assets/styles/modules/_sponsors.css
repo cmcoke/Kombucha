@@ -7,7 +7,7 @@
     place-self: center;
     margin-bottom: 15px;
 
-    @mixin atSmall{
+    @mixin atMedium{
       margin-bottom: 0;
     }
   }
@@ -17,7 +17,7 @@
 
     & img{
 
-      @mixin atSmall{
+      @mixin atMedium{
         max-width: 6.875rem; /* 110px = 6.875rem*/
       }
 
@@ -32,7 +32,7 @@
 
   &__1{
 
-    @mixin atSmall{
+    @mixin atMedium{
       grid-column: 2/3;
     }
   
@@ -41,7 +41,7 @@
 
   &__2{
     
-    @mixin atSmall{
+    @mixin atMedium{
       grid-column: 3/4;
     }
 
@@ -50,7 +50,7 @@
 
   &__3{
 
-    @mixin atSmall{
+    @mixin atMedium{
       grid-column: 4/5;
     }
     
@@ -59,7 +59,7 @@
 
   &__4{
 
-    @mixin atSmall{
+    @mixin atMedium{
       grid-column: 5/6;
     }
 
@@ -68,12 +68,11 @@
 
   &__5{
 
-    @mixin atSmall{
+    @mixin atMedium{
       grid-column: 6/7;
     }
     
   }
-
 
 
 }

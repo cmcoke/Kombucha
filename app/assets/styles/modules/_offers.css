@@ -1,0 +1,102 @@
+.offers{
+
+  @mixin atSmall{
+    margin: 3rem 0;
+  }
+
+  /* section' text content -- '100% Authentic Product' & 'And produce say the ten momments ...'  */
+  &__text-content{
+    grid-column: 2/12;
+    text-align: center;
+  }
+
+
+  /* paragraph text content --  'And produce say the ten momments ...' */
+  &__text-content p{
+    margin-top: 10px;
+  }
+
+
+  /* list of offers */
+  &__list{
+    grid-column: 2/12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+
+    @mixin atSmall{
+      margin-top: 2rem;
+    }
+
+    @mixin atMedium{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @mixin atLarge{
+      grid-column: 3/11;
+      justify-content: space-between;
+    }
+
+    @mixin atXLarge{
+      justify-content: space-evenly;
+    }
+
+    @mixin atXXLarge{
+      grid-column: 4/10;
+      justify-content: space-evenly;
+      margin-top: 3rem;
+    }
+
+  }
+
+
+  &__list li{
+    margin-bottom: 20px;
+  }
+
+
+  /* each offer iamge*/
+  &__list li img{
+    max-width: 5.625rem;  /* 90px = 5.625rem  */
+
+    @mixin atMedium{
+      max-width: 5rem; 
+    }
+
+    @mixin atLarge{
+      max-width: 6rem; 
+    }
+
+    @mixin atXLarge{
+      max-width: 7rem; 
+    }
+
+    @mixin atXXLarge{
+      max-width: 8rem; 
+    }
+
+  }
+
+  /* the 'EXPLORE MORE' button */
+  & .button{
+    grid-column: 3/11;
+    justify-self: center;
+    align-self: center;
+
+    @mixin atMedium{
+      grid-column: 5/9;
+      margin-top: 2rem;
+    }
+
+    @mixin atLarge{
+      grid-column: 5/9;
+      margin-top: 2rem;
+    }
+
+  }
+
+
+}

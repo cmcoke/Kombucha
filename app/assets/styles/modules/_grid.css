@@ -15,8 +15,14 @@
   /* sponsors section */
   &--sponsors{
     display: grid;
-    grid-template-columns: minmax(2rem, 1fr) repeat(5, 1fr) minmax(2rem, 1fr);
+    grid-template-columns: minmax(2rem, 4rem) repeat(5, 1fr) minmax(2rem, 4rem);
     grid-gap: 0 1rem;
+
+    @mixin atXLarge{
+      grid-template-columns: minmax(2rem, 1fr) repeat(5, 1fr) minmax(2rem, 1fr);
+      grid-gap: 0;
+    }
+
   }
 
 }
