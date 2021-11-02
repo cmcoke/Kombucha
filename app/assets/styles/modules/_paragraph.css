@@ -8,4 +8,8 @@
   &--medium{
     font-size: clamp(1rem, 1vw, 1.375rem);
   }
+
+  &--other-items{
+    font-size: clamp(1rem, 1vw, 1.25rem);
+  }
 }
