@@ -10,6 +10,7 @@
   }
 
   &--other-items{
-    font-size: clamp(1rem, 1vw, 1.25rem);
+    font-size: clamp(1rem, 1vw, 1.3125rem);
+    line-height: 1.7;
   }
 }

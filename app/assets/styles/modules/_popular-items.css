@@ -121,7 +121,7 @@
 
     @mixin atLarge{
       margin-top: 60px;
-      grid-gap: 0 2rem;
+      grid-gap: 0 3rem;
     }
 
   }
@@ -152,7 +152,7 @@
     }
 
     @mixin atLarge{
-      grid-template-columns: 250px 160px;
+      grid-template-columns: 230px 150px;
       max-width: 50rem;
     }
 

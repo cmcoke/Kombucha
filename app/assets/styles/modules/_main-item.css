@@ -47,7 +47,7 @@
 
   &__price span{
     color: #3b3b3b;
-    font-family: $price-font;
+    font-family: $number-font;
     font-size: clamp(2.1875rem, 1rem + 1vw, 2.8125rem);
     font-weight: bold;
   }
