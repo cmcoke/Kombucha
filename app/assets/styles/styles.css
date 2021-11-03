@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Oxygen:wght@700&family=Poppins:wght@300;400&family=Red+Hat+Display:wght@400;500&display=swap');
 @import "normalize.css";
+@import "@glidejs/glide/dist/css/glide.core.min.css";
 @import "base/_variables";
 @import "base/_mixins";
 @import "base/_global";
@@ -15,3 +16,5 @@
 @import "modules/_other-items";
 @import "modules/_popular-items";
 @import "modules/_stats";
+@import "modules/_testimonial";
+

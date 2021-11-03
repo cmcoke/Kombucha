@@ -1,0 +1,137 @@
+.testimonial{
+  margin-right: 0;
+  margin-left: 0;
+
+  &__text-content{
+    grid-column: 2/12;
+    grid-row: 1/2;
+    justify-self: center;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    padding: 2rem;
+
+    @mixin atXXLarge{
+      padding: 2rem 4rem;
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+  }
+
+
+  /* image of quotation mark */
+  &__quotation-mark{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+  }
+
+
+  /* client' image, ratings & name */
+  &__client{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: end;
+    justify-self: center;
+    text-align: center;
+  }
+
+
+  /* image of client */
+  &__client-image{
+    border-radius: 80px;
+    overflow: hidden;
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+  /* client' name */
+  &__client-name{
+    font-family: $primary-font;
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+
+  /* client' quote about the item */
+  &__quote{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    text-align: center;
+    color: #989896;
+    font-size: clamp(1rem, 1vw, 1.125rem);
+  }
+
+
+  /* glidejs css settings */
+  & .glides{
+    overflow: visible;
+  }
+
+  & .glide{
+    grid-column: 2/12;
+    justify-self: center;
+  }
+
+  & .glide__arrows{
+    grid-column: 4/8;
+  }
+
+  & .glide__slide{
+    transition: .3s linear;
+    margin: 1rem 0 4rem 0;
+  }
+
+  & .glide__slide--active{
+    box-shadow: 0 20px 33px rgba(0,0,0,.07);
+    transform: scale(1.1);
+  }
+
+  & .glide__slide--active .testimonial__client-name{
+    color: $color-purple;
+  }
+
+  & .glide__slide--active .testimonial__quote{
+    color: $color-black;
+  }
+
+
+  /* navigation arrows */
+  &__navigation{
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: center;
+    grid-column: 5/9;
+
+    @mixin atMedium{
+      grid-column: 4/10;
+    }
+
+  }
+
+  /* previous/left navigation arrow */
+  &__left-arrow{
+    margin-bottom: -4px;
+
+    @mixin atMedium{
+      margin-right: 30px;
+    }
+
+  }
+
+
+}

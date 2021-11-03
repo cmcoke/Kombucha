@@ -6,7 +6,7 @@
   }
 
   @mixin atXLarge{
-    margin: 8rem 0;
+    margin: 8rem 0 4rem 0;
   }
 
   &__container{
