@@ -2,6 +2,9 @@
   margin-right: 0;
   margin-left: 0;
 
+  margin-bottom: 5rem;
+
+
   &__text-content{
     grid-column: 2/12;
     grid-row: 1/2;
