@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "webpack serve",
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d docs"
   },
   "homepage": "https://cmcoke/github.io/kombucha",
   "dependencies": {
