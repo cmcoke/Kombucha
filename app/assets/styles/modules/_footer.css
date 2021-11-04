@@ -195,6 +195,7 @@
   &__heading{
     font-family: $primary-font;
     font-size: clamp(1.5625rem, 1vw, 1.875rem);
+    font-weight: 500;
     margin-top: 0;
     color: #393939;
   }

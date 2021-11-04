@@ -6,7 +6,8 @@
   text-transform: uppercase;
   padding: 18px 50px;
   display: inline-block;
-  
+  box-shadow: 0 35px 33px rgba(0,0,0,.14);
+
  
   @mixin atMedium{
     padding: 20px 50px;

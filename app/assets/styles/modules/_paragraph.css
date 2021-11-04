@@ -6,11 +6,11 @@
   color: #393939;
 
   &--medium{
-    font-size: clamp(1rem, 1vw, 1.375rem);
+    font-size: clamp(1rem, 1vw, 1.1975rem);
   }
 
   &--other-items{
-    font-size: clamp(1rem, 1vw, 1.3125rem);
+    font-size: clamp(1rem, 1vw, 1.295rem);
     line-height: 1.7;
   }
 }

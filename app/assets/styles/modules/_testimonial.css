@@ -76,7 +76,7 @@
     grid-row: 2/3;
     text-align: center;
     color: #989896;
-    font-size: clamp(1rem, 1vw, 1.125rem);
+    font-size: clamp(1rem, 1vw, 1.1875rem);
   }
 
 

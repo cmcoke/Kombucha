@@ -17,6 +17,10 @@
       grid-column: 2/12;
     }
 
+    @mixin atXXLarge{
+      grid-column: 3/11;
+    }
+
   }
 
 
